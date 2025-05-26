@@ -1,0 +1,22 @@
+@import '../fonts/formular/stylesheet.css';
+
+html {
+  font-size: 16px;
+  font-family: 'Formular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Formular', sans-serif;
+}
