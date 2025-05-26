@@ -1,0 +1,77 @@
+.tariffs-banner {
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/tariffs-banner-snow.png) top left / cover no-repeat;
+  background-color: #cedfff;
+
+  @include desktop {
+    position: static;
+  }
+
+  & .container-m {
+    @include desktop {
+      position: relative;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding: 169px 0 166px;
+    width: min-content;
+    font-family: 'Formular', sans-serif;
+    font-weight: 700;
+    font-size: 98px;
+    line-height: 114%;
+    letter-spacing: -0.02em;
+    color: #000;
+
+    @include tablet {
+      padding: 72px 0 72px;
+      font-size: 82px;
+    }
+
+    @include mobile {
+      font-size: 60px;
+    }
+
+    & span {
+      font-size: 101px;
+
+      @include tablet {
+        font-size: 84px;
+      }
+
+      @include mobile {
+        font-size: 62px;
+      }
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    aspect-ratio: 1022 / 561;
+
+    @include desktop {
+      left: 480px;
+      right: auto;
+    }
+
+    @include laptop {
+      position: static;
+      margin: 0 -20px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      width: auto;
+    }
+  }
+}

@@ -20,11 +20,93 @@ textarea {
   font-family: "Formular", sans-serif;
 }
 
-.container {
-  max-width: 1440px;
+.container-m {
+  max-width: 1372px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.tariffs-banner {
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/tariffs-banner-snow.png) top left/cover no-repeat;
+  background-color: #cedfff;
+}
+@media (max-width: 1400px) {
+  .tariffs-banner {
+    position: static;
+  }
+}
+@media (max-width: 1400px) {
+  .tariffs-banner .container-m {
+    position: relative;
+  }
+}
+.tariffs-banner__title {
+  position: relative;
+  margin: 0;
+  padding: 169px 0 166px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-family: "Formular", sans-serif;
+  font-weight: 700;
+  font-size: 98px;
+  line-height: 114%;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .tariffs-banner__title {
+    padding: 72px 0 72px;
+    font-size: 82px;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-banner__title {
+    font-size: 60px;
+  }
+}
+.tariffs-banner__title span {
+  font-size: 101px;
+}
+@media (max-width: 768px) {
+  .tariffs-banner__title span {
+    font-size: 84px;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-banner__title span {
+    font-size: 62px;
+  }
+}
+.tariffs-banner__figure {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  margin: 0;
+  aspect-ratio: 1022/561;
+}
+@media (max-width: 1400px) {
+  .tariffs-banner__figure {
+    left: 480px;
+    right: auto;
+  }
+}
+@media (max-width: 992px) {
+  .tariffs-banner__figure {
+    position: static;
+    margin: 0 -20px;
+  }
+}
+.tariffs-banner__figure-image {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  width: auto;
 }
