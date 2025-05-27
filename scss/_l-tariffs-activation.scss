@@ -1,0 +1,127 @@
+.tariffs-activation {
+  padding: 88px 0 133px;
+  background-color: #ffffff;
+
+  &__wrapper {
+    padding: 42px 82px 64px;
+    border-radius: 28px;
+    box-shadow: 1px 6px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: #f8f9fa;
+
+    @include desktop {
+      padding: 42px 60px 64px;
+    }
+
+    @include laptop {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 10;
+    max-width: 726px;
+    margin: 0 auto 40px;
+    box-sizing: border-box;
+    font-family: 'Formular', sans-serif;
+    font-weight: 700;
+    font-size: 51px;
+    letter-spacing: -0.02em;
+    color: #000;
+    text-align: center;
+
+    @include laptop {
+      margin-bottom: 32px;
+      font-size: 42px;
+    }
+
+    @include mobile {
+      margin-bottom: 28px;
+      font-size: 36px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include laptop {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+      max-width: 340px;
+      padding: 25px 24px 0;
+      box-sizing: border-box;
+      border: 3px solid #8dd1ff;
+      border-radius: 35px;
+      background-color: #fff;
+
+      @include desktop {
+        padding: 20px 20px 0;
+      }
+
+      @include laptop {
+        flex: 0 0 calc(100% / 2 - 16px / 2);
+        max-width: none;
+      }
+
+      @include mobile {
+        flex: 1 1 100%;
+      }
+
+      &-title {
+        margin: 0 0 20px;
+        font-family: 'Formular', sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #133779;
+
+        @include laptop {
+          margin-bottom: 16px;
+          font-size: 22px;
+        }
+      }
+
+      &-text {
+        margin: 0 0 12px;
+        font-family: 'Formular', sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #242424;
+
+        @include laptop {
+          font-size: 16px;
+        }
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      &-figure {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex: 1 1 auto;
+        margin: 0;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 234px;
+        }
+      }
+    }
+  }
+}
