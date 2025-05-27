@@ -1,0 +1,148 @@
+.tariffs-advantages {
+  padding: 54px 0 80px;
+  background-color: #f6faff;
+
+  @include laptop {
+    padding: 40px 0;
+  }
+
+  & .container-m {
+    position: relative;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 10;
+    margin: 0 0 40px;
+    font-family: 'Formular', sans-serif;
+    font-weight: 700;
+    font-size: 51px;
+    letter-spacing: -0.02em;
+    color: #000;
+
+    @include laptop {
+      margin-bottom: 32px;
+      font-size: 42px;
+    }
+
+    @include mobile {
+      margin-bottom: 28px;
+      font-size: 36px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    max-width: 927px;
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px 20px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      background-color: #ffffff;
+
+      @include laptop {
+        gap: 12px;
+        padding: 20px 16px;
+      }
+
+      &:nth-child(odd) {
+        flex: 0 0 55%;
+
+        @include tablet {
+          flex: 1 1 100%;
+        }
+      }
+
+      &:nth-child(even) {
+        flex: 0 0 calc(100% - 55% - 24px);
+
+        @include tablet {
+          flex: 1 1 100%;
+        }
+      }
+
+      &-icon {
+        display: flex;
+        align-items: flex-start;
+        flex: 0 0 67px;
+        margin: 0;
+
+        @include laptop {
+          flex: 0 0 56px;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      &-content {
+        &-title {
+          margin: 0 0 8px;
+          font-family: 'Formular', sans-serif;
+          font-weight: 700;
+          font-size: 23px;
+          color: #133573;
+
+          @include laptop {
+            font-size: 20px;
+          }
+        }
+
+        &-text {
+          font-family: 'Formular', sans-serif;
+          font-weight: 400;
+          font-size: 19px;
+          color: #242424;
+
+          @include laptop {
+            font-size: 16px;
+          }
+
+          & b {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 40px;
+    left: 947px;
+    z-index: 1;
+    margin: 0;
+    width: 894px;
+    aspect-ratio: 894 / 710;
+
+    @include desktop {
+      left: 720px;
+    }
+
+    @include laptop {
+      position: static;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 40px 0 0;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

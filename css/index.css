@@ -29,6 +29,10 @@ textarea {
           box-sizing: border-box;
 }
 
+.tariffs-main {
+  overflow: hidden;
+}
+
 .tariffs-banner {
   position: relative;
   overflow: hidden;
@@ -67,7 +71,7 @@ textarea {
 }
 @media (max-width: 576px) {
   .tariffs-banner__title {
-    font-size: 60px;
+    font-size: 54px;
   }
 }
 .tariffs-banner__title span {
@@ -80,7 +84,7 @@ textarea {
 }
 @media (max-width: 576px) {
   .tariffs-banner__title span {
-    font-size: 62px;
+    font-size: 56px;
   }
 }
 .tariffs-banner__figure {
@@ -109,4 +113,177 @@ textarea {
   max-width: 100%;
   height: 100%;
   width: auto;
+}
+
+.tariffs-advantages {
+  padding: 54px 0 80px;
+  background-color: #f6faff;
+}
+@media (max-width: 992px) {
+  .tariffs-advantages {
+    padding: 40px 0;
+  }
+}
+.tariffs-advantages .container-m {
+  position: relative;
+}
+.tariffs-advantages__title {
+  position: relative;
+  z-index: 10;
+  margin: 0 0 40px;
+  font-family: "Formular", sans-serif;
+  font-weight: 700;
+  font-size: 51px;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .tariffs-advantages__title {
+    margin-bottom: 32px;
+    font-size: 42px;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-advantages__title {
+    margin-bottom: 28px;
+    font-size: 36px;
+  }
+}
+.tariffs-advantages__list {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px 24px;
+  max-width: 927px;
+}
+.tariffs-advantages__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 24px;
+  padding: 24px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+@media (max-width: 992px) {
+  .tariffs-advantages__list-item {
+    gap: 12px;
+    padding: 20px 16px;
+  }
+}
+.tariffs-advantages__list-item:nth-child(odd) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55%;
+          flex: 0 0 55%;
+}
+@media (max-width: 768px) {
+  .tariffs-advantages__list-item:nth-child(odd) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.tariffs-advantages__list-item:nth-child(even) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(45% - 24px);
+          flex: 0 0 calc(45% - 24px);
+}
+@media (max-width: 768px) {
+  .tariffs-advantages__list-item:nth-child(even) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.tariffs-advantages__list-item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 67px;
+          flex: 0 0 67px;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .tariffs-advantages__list-item-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 56px;
+            flex: 0 0 56px;
+  }
+}
+.tariffs-advantages__list-item-icon-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.tariffs-advantages__list-item-content-title {
+  margin: 0 0 8px;
+  font-family: "Formular", sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  color: #133573;
+}
+@media (max-width: 992px) {
+  .tariffs-advantages__list-item-content-title {
+    font-size: 20px;
+  }
+}
+.tariffs-advantages__list-item-content-text {
+  font-family: "Formular", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  color: #242424;
+}
+@media (max-width: 992px) {
+  .tariffs-advantages__list-item-content-text {
+    font-size: 16px;
+  }
+}
+.tariffs-advantages__list-item-content-text b {
+  font-weight: 700;
+}
+.tariffs-advantages__figure {
+  position: absolute;
+  top: 40px;
+  left: 947px;
+  z-index: 1;
+  margin: 0;
+  width: 894px;
+  aspect-ratio: 894/710;
+}
+@media (max-width: 1400px) {
+  .tariffs-advantages__figure {
+    left: 720px;
+  }
+}
+@media (max-width: 992px) {
+  .tariffs-advantages__figure {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin: 40px 0 0;
+  }
+}
+.tariffs-advantages__figure-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
