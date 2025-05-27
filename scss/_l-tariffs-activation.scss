@@ -2,6 +2,10 @@
   padding: 88px 0 133px;
   background-color: #ffffff;
 
+  & .container-m {
+    max-width: 1406px;
+  }
+
   &__wrapper {
     padding: 42px 82px 64px;
     border-radius: 28px;
