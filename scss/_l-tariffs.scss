@@ -1,0 +1,326 @@
+.tariffs {
+  padding: 78px 0 58px;
+
+  @include laptop {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-family: 'Formular', sans-serif;
+    font-weight: 700;
+    font-size: 51px;
+    letter-spacing: -0.02em;
+    color: #000;
+    text-align: center;
+
+    @include laptop {
+      margin-bottom: 32px;
+      font-size: 42px;
+    }
+
+    @include mobile {
+      margin-bottom: 28px;
+      font-size: 36px;
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 64px;
+    margin: 0 0 45px;
+
+    @include laptop {
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      gap: 16px 8px;
+    }
+
+    &-button {
+      position: relative;
+      display: inline-block;
+      flex: 0 0 auto;
+      min-width: 194px;
+      padding: 12px 24px;
+      box-sizing: border-box;
+      font-family: 'Formular', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: #4c7bd1;
+      border: 3px solid #4c7bd1;
+      border-radius: 18px;
+      background-color: #ffffff;
+      transition-property: background-color, border-color, color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      @include laptop {
+        min-width: 136px;
+        font-size: 16px;
+        border-width: 2px;
+      }
+
+      @include mobile {
+        flex: 0 0 calc(100% / 2 - 8px / 2);
+        max-width: calc(100% / 2 - 8px / 2);
+        padding: 12px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        display: inline-block;
+        width: 100%;
+        height: 5px;
+        border-radius: 6px;
+        background-color: #4c7bd1;
+        opacity: 0;
+        pointer-events: none;
+        transition-property: opacity;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+
+        @include tablet {
+          top: calc(100% + 8px);
+          height: 4px;
+        }
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &.active {
+        color: #ffffff;
+        background-color: #4c7bd1;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    margin: 0 0 50px;
+
+    @include laptop {
+      margin-bottom: 32px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 80px;
+      width: 100%;
+      display: none;
+
+      @include laptop {
+        gap: 24px;
+      }
+
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 1 auto;
+    min-height: 492px;
+    max-width: calc(100% / 2 - 80px / 2);
+    width: 416px;
+    padding: 80px 36px 31px;
+    box-sizing: border-box;
+    border-radius: 38px;
+    background: url(../assets/tariffs-card-bg.svg) center / cover no-repeat;
+
+    @include laptop {
+      max-width: calc(100% / 2 - 24px / 2);
+      padding: 64px 24px 32px;
+      border-radius: 24px;
+    }
+
+    @include tablet {
+      max-width: none;
+      min-height: 400px;
+      flex: 1 1 100%;
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      font-weight: 900;
+      font-size: 51px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #fff;
+
+      @include laptop {
+        font-size: 48px;
+      }
+
+      @include mobile {
+        font-size: 40px;
+      }
+    }
+
+    &-description {
+      max-width: 196px;
+      font-weight: 400;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    &-buy {
+      display: flex;
+      align-items: flex-end;
+      flex: 1 1 auto;
+
+      &-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 11px 28px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 19px;
+        background-color: #ffffff;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+        cursor: pointer;
+
+        @include laptop {
+          padding: 12px 20px;
+          border-radius: 12px;
+        }
+
+        &:hover {
+          background-color: #009ffe;
+        }
+
+        &-text {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-weight: 500;
+          font-size: 23px;
+          letter-spacing: -0.02em;
+          text-align: center;
+          color: #0077be;
+          pointer-events: none;
+          transition-property: color;
+          transition-timing-function: inherit;
+          transition-duration: inherit;
+
+          @include laptop {
+            font-size: 20px;
+          }
+
+          @include mobile {
+            font-size: 16px;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 38px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/shopping-cart-icon.svg) center / cover no-repeat;
+            transition-property: filter;
+            transition-timing-function: inherit;
+            transition-duration: inherit;
+
+            @include laptop {
+              width: 28px;
+            }
+
+            @include mobile {
+              width: 22px;
+            }
+          }
+        }
+
+        &:hover &-text {
+          color: #ffffff;
+
+          &::before {
+            filter: brightness(0%) invert(100%);
+          }
+        }
+
+        &-price {
+          font-weight: 400;
+          font-size: 23px;
+          letter-spacing: -0.02em;
+          text-align: center;
+          color: #282828;
+          pointer-events: none;
+          transition-property: color;
+          transition-timing-function: inherit;
+          transition-duration: inherit;
+
+          @include laptop {
+            font-size: 20px;
+          }
+
+          @include mobile {
+            font-size: 16px;
+          }
+        }
+
+        &:hover &-price {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__disclaimer {
+    max-width: 1061px;
+    margin: 0 auto;
+    padding: 23px 38px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 131%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #000;
+    border: 2px solid #8dd1ff;
+    border-radius: 15px;
+
+    @include laptop {
+      padding: 24px 16px;
+      font-size: 16px;
+    }
+
+    & b {
+      font-weight: 700;
+    }
+  }
+}
