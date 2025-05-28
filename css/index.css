@@ -688,3 +688,138 @@ textarea {
     width: 480px;
   }
 }
+
+.tariffs-faq {
+  padding: 103px 0 40px;
+  background-color: #f3f3f4;
+}
+@media (max-width: 992px) {
+  .tariffs-faq {
+    padding: 40px 0;
+  }
+}
+.tariffs-faq__title {
+  position: relative;
+  z-index: 10;
+  margin: 0 0 40px;
+  font-family: "Formular", sans-serif;
+  font-weight: 700;
+  font-size: 51px;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .tariffs-faq__title {
+    margin-bottom: 32px;
+    font-size: 42px;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-faq__title {
+    margin-bottom: 28px;
+    font-size: 36px;
+  }
+}
+.tariffs-faq__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.tariffs-faq__item {
+  padding: 27px 32px;
+  border-radius: 14px;
+  background-color: #ffffff;
+}
+@media (max-width: 992px) {
+  .tariffs-faq__item {
+    padding: 20px 24px;
+  }
+}
+.tariffs-faq__item.hidden {
+  display: none;
+}
+.tariffs-faq__item-question {
+  margin: 0 0 8px;
+  font-family: "Formular", sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 131%;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .tariffs-faq__item-question {
+    font-size: 20px;
+  }
+}
+.tariffs-faq__item-answer {
+  max-width: 958px;
+  margin: 0;
+  font-family: "Formular", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 131%;
+  letter-spacing: -0.02em;
+  color: #0e2758;
+}
+@media (max-width: 992px) {
+  .tariffs-faq__item-answer {
+    font-size: 16px;
+  }
+}
+.tariffs-faq__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 40px 0 0;
+}
+@media (max-width: 992px) {
+  .tariffs-faq__more {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .tariffs-faq__more {
+    margin-top: 28px;
+  }
+}
+.tariffs-faq__more.hidden {
+  display: none;
+}
+.tariffs-faq__more-button {
+  display: inline-block;
+  padding: 22px 55px;
+  font-family: "Formular", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  background: #0077be;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .tariffs-faq__more-button {
+    padding: 14px 40px;
+    font-size: 20px;
+  }
+}
+.tariffs-faq__more-button:hover {
+  background-color: #009ffe;
+}
+.tariffs-faq__more-button:active {
+  background-color: #0077be;
+}

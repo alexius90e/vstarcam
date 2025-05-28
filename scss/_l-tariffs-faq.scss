@@ -1,0 +1,124 @@
+.tariffs-faq {
+  padding: 103px 0 40px;
+  background-color: #f3f3f4;
+
+  @include laptop {
+    padding: 40px 0;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 10;
+    margin: 0 0 40px;
+    font-family: 'Formular', sans-serif;
+    font-weight: 700;
+    font-size: 51px;
+    letter-spacing: -0.02em;
+    color: #000;
+
+    @include laptop {
+      margin-bottom: 32px;
+      font-size: 42px;
+    }
+
+    @include mobile {
+      margin-bottom: 28px;
+      font-size: 36px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    padding: 27px 32px;
+    border-radius: 14px;
+    background-color: #ffffff;
+
+    @include laptop {
+      padding: 20px 24px;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &-question {
+      margin: 0 0 8px;
+      font-family: 'Formular', sans-serif;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 131%;
+      letter-spacing: -0.02em;
+      color: #000;
+
+      @include laptop {
+        font-size: 20px;
+      }
+    }
+
+    &-answer {
+      max-width: 958px;
+      margin: 0;
+      font-family: 'Formular', sans-serif;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 131%;
+      letter-spacing: -0.02em;
+      color: #0e2758;
+
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0;
+
+    @include laptop {
+      margin-top: 32px;
+    }
+
+    @include mobile {
+      margin-top: 28px;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &-button {
+      display: inline-block;
+      padding: 22px 55px;
+      font-family: 'Formular', sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      background: #0077be;
+      transition: all ease-out 0.2s;
+      cursor: pointer;
+
+      @include laptop {
+        padding: 14px 40px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        background-color: #009ffe;
+      }
+
+      &:active {
+        background-color: #0077be;
+      }
+    }
+  }
+}
