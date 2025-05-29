@@ -46,7 +46,6 @@ if (tariffsModal) {
     if (isLayout || isClose) event.currentTarget.classList.remove('active');
 
     if (isPlusBtn || isMinusBtn) {
-      const modalInfoEl = tariffsModal.querySelector('.tariffs__modal-main-info-value');
       const modalPriceEl = tariffsModal.querySelector('.tariffs__modal-main-price-value');
       const modalCounterEl = tariffsModal.querySelector('.tariffs__modal-main-counter');
       const modalCounterValueEl = tariffsModal.querySelector('.tariffs__modal-main-counter-value');
@@ -107,7 +106,7 @@ tariffsCards.forEach((card) => {
         }
 
         if (titleEl && modalInfoEl) {
-          modalInfoEl.innerText = titleEl.innerText.trim();
+          modalInfoEl.innerText = titleEl.innerText.toLowerCase().split('\n').join(' ');
         }
 
         if (priceEl && modalPriceEl) {
