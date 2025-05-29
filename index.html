@@ -130,6 +130,219 @@
             действия тарифа. Для отмены подписки перейдите по ссылке в письме, которое придет на
             указанную вами почту за 2 дня до окончания действия тарифа.
           </div>
+
+          <div class="tariffs__modal active">
+            <div class="tariffs__modal-body">
+              <div class="tariffs__modal-wrapper">
+                <div class="tariffs__modal-content">
+                  <div class="tariffs__modal-main">
+                    <div class="tariffs__modal-main-info">
+                      Тариф Облачное хранение «
+                      <span class="tariffs__modal-main-info-value">7 дней / 1 месяц </span>
+                      »
+                    </div>
+
+                    <div class="tariffs__modal-main-price" >
+                      <span class="tariffs__modal-main-price-value" data-price="0">1796</span>
+                      <span class="tariffs__modal-main-price-currency"> ₽</span>
+                    </div>
+
+                    <div class="tariffs__modal-main-counter" data-value="1">
+                      <button class="tariffs__modal-main-counter-minus"></button>
+                      <span class="tariffs__modal-main-counter-value">4 камеры</span>
+                      <button class="tariffs__modal-main-counter-plus"></button>
+                    </div>
+
+                    <div class="tariffs__modal-main-toggler">
+                      <button
+                        class="tariffs__modal-main-toggler-button active"
+                        data-target="formIndividual"
+                      >
+                        Физические лица
+                      </button>
+                      <button class="tariffs__modal-main-toggler-button" data-target="formCompany">
+                        Юридические лица
+                      </button>
+                    </div>
+
+                    <div class="tariffs__modal-main-callback">
+                      <form class="tariffs__modal-main-form active" id="formIndividual">
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Имя</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="name"
+                            placeholder="Иван"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Фамилия</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="surname"
+                            placeholder="Иванов"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Город</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="city"
+                            placeholder="Москва"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Телефон</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="tel"
+                            name="phone"
+                            placeholder="+7"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Почта</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="email"
+                            name="email"
+                            placeholder="ivanov@yandex.ru"
+                            required
+                          />
+                        </label>
+
+                        <fieldset class="tariffs__modal-main-form-promo">
+                          <input
+                            class="tariffs__modal-main-form-promo-input"
+                            type="text"
+                            placeholder="Ввести промокод..."
+                          />
+                          <button class="tariffs__modal-main-form-promo-button" disabled>Применить</button>
+                        </fieldset>
+
+                        <label class="tariffs__modal-main-form-agreement">
+                          <input
+                            class="tariffs__modal-main-form-agreement-input"
+                            type="checkbox"
+                            name="agreement"
+                          />
+                          <span class="tariffs__modal-main-form-agreement-text"
+                            >Я согласен с <a href="#">Лицензионным соглашением</a></span
+                          >
+                        </label>
+
+                        <fieldset class="tariffs__modal-main-form-submit">
+                          <input
+                            class="tariffs__modal-main-form-submit-button"
+                            type="submit"
+                            value="Оформить заказ"
+                          />
+                        </fieldset>
+                      </form>
+
+                      <form class="tariffs__modal-main-form" id="formCompany">
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Имя</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="name"
+                            placeholder="Иван"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Фамилия</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="surname"
+                            placeholder="Иванов"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Город</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="city"
+                            placeholder="Москва"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Телефон</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="tel"
+                            name="phone"
+                            placeholder="+7"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">Почта</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="email"
+                            name="email"
+                            placeholder="ivanov@yandex.ru"
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-control">
+                          <span class="tariffs__modal-main-form-control-text">ИНН</span>
+                          <input
+                            class="tariffs__modal-main-form-control-input"
+                            type="text"
+                            name="inn"
+                            placeholder="..."
+                            required
+                          />
+                        </label>
+
+                        <label class="tariffs__modal-main-form-agreement">
+                          <input
+                            class="tariffs__modal-main-form-agreement-input"
+                            type="checkbox"
+                            name="agreement"
+                          />
+                          <span class="tariffs__modal-main-form-agreement-text"
+                            >Я согласен с <a href="#">Лицензионным соглашением</a></span
+                          >
+                        </label>
+
+                        <fieldset class="tariffs__modal-main-form-submit">
+                          <input
+                            class="tariffs__modal-main-form-submit-button"
+                            type="submit"
+                            value="Оформить заказ"
+                          />
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
