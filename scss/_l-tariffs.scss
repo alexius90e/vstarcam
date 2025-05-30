@@ -2,7 +2,11 @@
   padding: 78px 0 58px;
 
   @include laptop {
-    padding: 40px 0;
+    padding: 40px 0 66px;
+  }
+
+  @include tablet {
+    padding: 32px 0 66px;
   }
 
   &__title {
@@ -19,9 +23,14 @@
       font-size: 42px;
     }
 
+    @include tablet {
+      margin-bottom: 21px;
+      font-size: 32px;
+      text-align: left;
+    }
+
     @include mobile {
-      margin-bottom: 28px;
-      font-size: 36px;
+      font-size: 18px;
     }
   }
 
@@ -29,7 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 16px 64px;
     margin: 0 0 45px;
 
@@ -38,8 +46,14 @@
       margin-bottom: 32px;
     }
 
-    @include mobile {
-      gap: 16px 8px;
+    @include tablet {
+      justify-content: flex-start;
+      gap: 9px;
+      max-width: 100%;
+      overflow: auto;
+      padding: 0 20px 10px;
+      margin: 0 -20px 14px;
+      margin-bottom: 14px;
     }
 
     &-button {
@@ -70,9 +84,7 @@
       }
 
       @include mobile {
-        flex: 0 0 calc(100% / 2 - 8px / 2);
-        max-width: calc(100% / 2 - 8px / 2);
-        padding: 12px;
+        padding: 8px 24px;
       }
 
       &::before {
@@ -122,6 +134,10 @@
       margin-bottom: 32px;
     }
 
+    @include mobile {
+      margin-bottom: 0;
+    }
+
     &-item {
       display: flex;
       align-items: flex-start;
@@ -132,7 +148,7 @@
       display: none;
 
       @include laptop {
-        gap: 24px;
+        gap: 24px 12px;
       }
 
       &.active {
@@ -151,6 +167,7 @@
     width: 416px;
     padding: 80px 36px 31px;
     box-sizing: border-box;
+    border: 2px solid #4c7bd1;
     border-radius: 38px;
     background: url(../assets/tariffs-card-bg.svg) center / cover no-repeat;
 
@@ -161,8 +178,12 @@
     }
 
     @include tablet {
+      min-height: 324px;
+      padding: 54px 24px 20px;
+    }
+
+    @include mobile {
       max-width: none;
-      min-height: 400px;
       flex: 1 1 100%;
     }
 
@@ -179,8 +200,8 @@
         font-size: 48px;
       }
 
-      @include mobile {
-        font-size: 40px;
+      @include tablet {
+        font-size: 34px;
       }
     }
 
@@ -190,6 +211,11 @@
       font-size: 19px;
       letter-spacing: -0.02em;
       color: #fff;
+
+      @include tablet {
+        width: 50%;
+        font-size: 12px;
+      }
     }
 
     &-buy {
@@ -218,6 +244,10 @@
           border-radius: 12px;
         }
 
+        @include tablet {
+          padding: 8px 16px;
+        }
+
         &:hover {
           background-color: #009ffe;
         }
@@ -240,8 +270,8 @@
             font-size: 20px;
           }
 
-          @include mobile {
-            font-size: 16px;
+          @include tablet {
+            font-size: 15px;
           }
 
           &::before {
@@ -259,8 +289,8 @@
               width: 28px;
             }
 
-            @include mobile {
-              width: 22px;
+            @include tablet {
+              width: 26px;
             }
           }
         }
@@ -288,8 +318,8 @@
             font-size: 20px;
           }
 
-          @include mobile {
-            font-size: 16px;
+          @include tablet {
+            font-size: 15px;
           }
         }
 
@@ -316,6 +346,10 @@
     @include laptop {
       padding: 24px 16px;
       font-size: 16px;
+    }
+
+    @include mobile {
+      display: none;
     }
 
     & b {
@@ -361,6 +395,13 @@
         padding: 12px;
         border-radius: 16px;
       }
+
+      @include mobile {
+        padding: 48px 16px 24px;
+        border: 1px solid #c8d6f1;
+        border-radius: 20px;
+        background-color: #f4f9ff;
+      }
     }
 
     &.active &-body {
@@ -373,6 +414,7 @@
       right: 24px;
       display: inline-block;
       width: 24px;
+      padding: 0;
       aspect-ratio: 1 / 1;
       border: none;
       outline-color: #c0e5ff;
@@ -380,9 +422,15 @@
       cursor: pointer;
 
       @include tablet {
-        top: 12px;
-        right: 12px;
+        top: 14px;
+        right: 14px;
         width: 20px;
+      }
+
+      @include mobile {
+        border-radius: 4px;
+        background-size: 14px;
+        background-color: #c0e5ff;
       }
     }
 
@@ -395,6 +443,11 @@
         padding: 24px 12px;
         border-radius: 16px;
       }
+
+      @include mobile {
+        padding: 0;
+        background-color: inherit;
+      }
     }
 
     &-content {
@@ -405,7 +458,7 @@
       scrollbar-color: rgba($color: #c0e5ff, $alpha: 0.3) rgba($color: #ffffff, $alpha: 0);
 
       @include tablet {
-        max-height: calc(100dvh - 112px);
+        max-height: calc(100dvh - 114px);
       }
     }
 
@@ -428,7 +481,9 @@
         background-color: #d9e9fe;
 
         @include mobile {
-          font-size: 16px;
+          padding: 6px 16px;
+          margin: 0 0 16px;
+          font-size: 12px;
         }
       }
 
@@ -449,10 +504,11 @@
         background-color: #ffffff;
 
         @include mobile {
-          min-width: auto;
-          padding: 12px 20px;
-          width: 100%;
-          font-size: 42px;
+          min-width: 198px;
+          margin-bottom: 12px;
+          padding: 8px 24px;
+          font-size: 34px;
+          border-radius: 8px;
         }
       }
 
@@ -475,6 +531,10 @@
           background-size: cover;
           background-repeat: no-repeat;
           cursor: pointer;
+
+          @include mobile {
+            width: 18px;
+          }
         }
 
         &-minus {
@@ -493,6 +553,11 @@
           letter-spacing: -0.02em;
           color: #000;
           text-align: center;
+
+          @include mobile {
+            min-width: 84px;
+            font-size: 9px;
+          }
         }
       }
 
@@ -502,6 +567,10 @@
         margin: 0 auto 22px;
         border-radius: 18px;
         background-color: #ffffff;
+
+        @include mobile {
+          margin-bottom: 12px;
+        }
 
         &-button {
           display: inline-block;
@@ -522,6 +591,11 @@
           transition-duration: 0.2s;
           cursor: pointer;
 
+          @include mobile {
+            padding: 6px 12px;
+            font-size: 9px;
+          }
+
           &.active {
             color: #ffffff;
             border-radius: 18px;
@@ -538,6 +612,10 @@
         margin: 0 auto;
         display: none;
 
+        @include mobile {
+          gap: 7px;
+        }
+
         &.active {
           display: flex;
         }
@@ -546,6 +624,10 @@
           display: flex;
           flex-direction: column;
           gap: 4px;
+
+          @include mobile {
+            gap: 2px;
+          }
 
           &-text {
             display: inline-block;
@@ -556,6 +638,11 @@
             line-height: 131%;
             letter-spacing: -0.02em;
             color: #000;
+
+            @include mobile {
+              padding-left: 12px;
+              font-size: 12px;
+            }
           }
 
           &-input {
@@ -573,6 +660,11 @@
             border-radius: 5px;
             outline-color: #8dd1ff;
             background-color: #ffffff;
+
+            @include mobile {
+              padding: 7px 8px;
+              font-size: 10px;
+            }
           }
         }
 
@@ -597,6 +689,11 @@
             border: 1px dashed #8dd1ff;
             border-radius: 5px 0 0 5px;
             outline-color: #8dd1ff;
+
+            @include mobile {
+              padding: 7px 8px;
+              font-size: 10px;
+            }
           }
 
           &-button {
@@ -618,7 +715,7 @@
             cursor: pointer;
 
             @include mobile {
-              padding: 7px 16px;
+              padding: 6px 16px;
               font-size: 14px;
             }
 
@@ -639,6 +736,10 @@
           gap: 12px;
           padding: 0 8px;
 
+          @include mobile {
+            gap: 10px;
+          }
+
           &-text {
             display: inline-block;
             font-family: 'Formular', sans-serif;
@@ -647,6 +748,10 @@
             line-height: 131%;
             letter-spacing: -0.02em;
             color: #000;
+
+            @include mobile {
+              font-size: 9px;
+            }
 
             & a {
               text-decoration: underline;
@@ -660,6 +765,10 @@
             margin: 0;
             border-color: #c9c9c9;
             outline-color: #8dd1ff;
+
+            @include mobile {
+              width: 11px;
+            }
           }
         }
 
@@ -670,6 +779,10 @@
           padding: 0;
           margin: 0;
           border: none;
+          
+          @include mobile {
+            padding-top: 13px;
+          }
 
           &-button {
             display: inline-block;
@@ -688,6 +801,13 @@
             background-color: #0077be;
             transition: background-color ease-out 0.2s;
             cursor: pointer;
+
+            @include mobile {
+              width: fit-content;
+              padding: 11px 32px;
+              font-size: 15px;
+              border-radius: 12px;
+            }
 
             &:hover {
               background-color: #009ffe;

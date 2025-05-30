@@ -6,6 +6,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 31px 0 20px;
+  }
+
   &__title {
     position: relative;
     z-index: 10;
@@ -21,9 +25,14 @@
       font-size: 42px;
     }
 
-    @include mobile {
+    @include tablet {
       margin-bottom: 28px;
-      font-size: 36px;
+      font-size: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 34px;
+      font-size: 18px;
     }
   }
 
@@ -42,6 +51,11 @@
       padding: 20px 24px;
     }
 
+    @include mobile {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
     &.hidden {
       display: none;
     }
@@ -58,6 +72,10 @@
       @include laptop {
         font-size: 20px;
       }
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
 
     &-answer {
@@ -73,6 +91,11 @@
       @include laptop {
         font-size: 16px;
       }
+
+      @include mobile {
+        font-size: 14px;
+        color: rgba(67, 67, 67, 0.66);
+      }
     }
   }
 
@@ -87,7 +110,7 @@
     }
 
     @include mobile {
-      margin-top: 28px;
+      margin-top: 16px;
     }
 
     &.hidden {
@@ -110,6 +133,11 @@
       @include laptop {
         padding: 14px 40px;
         font-size: 20px;
+      }
+
+      @include mobile {
+        padding: 10px 27px 11px;
+        font-size: 11px;
       }
 
       &:hover {

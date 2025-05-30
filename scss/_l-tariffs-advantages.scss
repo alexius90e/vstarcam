@@ -6,6 +6,11 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 24px 0 32px;
+    background-color: #ddecff;
+  }
+
   & .container-m {
     position: relative;
   }
@@ -25,9 +30,29 @@
       font-size: 42px;
     }
 
-    @include mobile {
+    @include tablet {
       margin-bottom: 28px;
-      font-size: 36px;
+      font-size: 32px;
+    }
+
+    @include mobile {
+      position: relative;
+      margin: 0 0 38px;
+      font-size: 18px;
+    }
+
+    &::before {
+      @include mobile {
+        content: '';
+        position: absolute;
+        right: -17px;
+        bottom: -42px;
+        z-index: -1;
+        display: block;
+        width: 138px;
+        height: 146px;
+        background: url(../assets/tariffs-advantages-image-mobile.png) center / cover no-repeat;
+      }
     }
   }
 
@@ -38,6 +63,10 @@
     flex-wrap: wrap;
     gap: 16px 24px;
     max-width: 927px;
+
+    @include mobile {
+      gap: 9px;
+    }
 
     &-item {
       display: flex;
@@ -51,6 +80,11 @@
       @include laptop {
         gap: 12px;
         padding: 20px 16px;
+      }
+
+      @include mobile {
+        padding: 13px 11px;
+        border-radius: 11px;
       }
 
       &:nth-child(odd) {
@@ -79,6 +113,10 @@
           flex: 0 0 56px;
         }
 
+        @include mobile {
+          flex: 0 0 36px;
+        }
+
         &-image {
           display: block;
           max-width: 100%;
@@ -97,6 +135,11 @@
           @include laptop {
             font-size: 20px;
           }
+
+          @include mobile {
+            margin-bottom: 5px;
+            font-size: 12px;
+          }
         }
 
         &-text {
@@ -107,6 +150,10 @@
 
           @include laptop {
             font-size: 16px;
+          }
+
+          @include mobile {
+            font-size: 10px;
           }
 
           & b {
@@ -136,6 +183,10 @@
       justify-content: center;
       width: 100%;
       margin: 40px 0 0;
+    }
+
+    @include mobile {
+      display: none;
     }
 
     &-image {

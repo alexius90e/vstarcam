@@ -17,8 +17,13 @@
 
           <figure class="tariffs-banner__figure">
             <img
-              class="tariffs-banner__figure-image"
+              class="tariffs-banner__figure-image tariffs-banner__figure-image_desktop"
               src="./assets/tariffs-banner-image.png"
+              alt="banner"
+            />
+            <img
+              class="tariffs-banner__figure-image tariffs-banner__figure-image_mobile"
+              src="./assets/tariffs-banner-image-mob.png"
               alt="banner"
             />
           </figure>
@@ -143,7 +148,7 @@
                       »
                     </div>
 
-                    <div class="tariffs__modal-main-price" >
+                    <div class="tariffs__modal-main-price">
                       <span class="tariffs__modal-main-price-value" data-price="0">1796</span>
                       <span class="tariffs__modal-main-price-currency"> ₽</span>
                     </div>
@@ -229,7 +234,9 @@
                             type="text"
                             placeholder="Ввести промокод..."
                           />
-                          <button class="tariffs__modal-main-form-promo-button" disabled>Применить</button>
+                          <button class="tariffs__modal-main-form-promo-button" disabled>
+                            Применить
+                          </button>
                         </fieldset>
 
                         <label class="tariffs__modal-main-form-agreement">
@@ -506,6 +513,36 @@
               <li class="tariffs-app__top-list-item">Бесплатное облачное хранилище</li>
               <li class="tariffs-app__top-list-item">Быстрое подключение и настройка</li>
             </ul>
+
+            <div class="tariffs-app__top-social">
+              <figure class="tariffs-app__top-social-phone">
+                <img
+                  class="tariffs-app__top-social-phone-image"
+                  src="./assets/tariffs-app-phone.png"
+                  alt="phone"
+                />
+              </figure>
+
+              <div class="tariffs-app__top-social-info">
+                <span class="tariffs-app__top-social-info-title">Скачайте приложение</span>
+
+                <a class="tariffs-app__top-social-link" href="#">
+                  <img
+                    class="tariffs-app__top-social-link-image"
+                    src="./assets/google-play-link.svg"
+                    alt="google-play"
+                  />
+                </a>
+
+                <a class="tariffs-app__top-social-link" href="#">
+                  <img
+                    class="tariffs-app__top-social-link-image"
+                    src="./assets/app-store-link.svg"
+                    alt="app-store"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
