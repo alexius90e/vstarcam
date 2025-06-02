@@ -1667,7 +1667,7 @@ textarea {
     gap: 8px;
     margin: 0 -20px;
     padding: 0 20px 42px;
-    background: url(../assets/tariffs-app-disk.svg) top left 20px/477px no-repeat;
+    background: url(../assets/tariffs-app-disk.png) top left 20px/477px no-repeat;
   }
 }
 .tariffs-app__top-social-phone {
